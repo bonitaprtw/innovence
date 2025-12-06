@@ -169,7 +169,7 @@ h2 {
     color: var(--text-dark);
 }
 
-.services-grid {
+.service-grid {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 30px;
@@ -979,3 +979,4 @@ footer {
     }
 
 }
+
