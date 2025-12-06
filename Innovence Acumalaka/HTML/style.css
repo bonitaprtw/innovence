@@ -1,0 +1,980 @@
+/* 1. VARIABLE & RESET GLOBAL */
+
+:root {
+    /* warna */
+    --primary-color: #1D4ED8;
+    --secondary-color: #FA8B0B;
+    --tersier-color: #4C7D2D;
+    --text-dark: #1F2937;
+    --text-light: #4B5563;
+    --card-bg-light: #fefefe;
+    --bg-light: #F9FAFB;
+    --white: #FFFFFF;
+
+    /* font */
+    --font-family-primary: 'Prompt', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-primary);
+
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+    scroll-behavior: smooth;
+}
+
+/* 2. HEADER & NAVIGASI */
+
+header {
+    background: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* CTA Button di Navigasi (Join Us) */
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.hamburger-menu {
+    display: none; /* Sembunyikan di desktop */
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: var(--text-dark);
+}
+
+/* 3. HERO SECTION */
+
+.hero {
+    background-color: var(--bg-light); 
+    padding: 100px 5% 120px;
+    text-align: center;
+    /* Jika Anda punya gambar hero yang besar, Anda bisa tambahkan background-image di sini */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.cta-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-primary:hover {
+    background-color: #1C3FAA; /* Sedikit lebih gelap */
+}
+
+.coming-soon {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ------------------------------------- */
+/* 4. SECTIONS UMUM */
+/* ------------------------------------- */
+
+section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+/* ------------------------------------- */
+/* 5. SERVICE GRID (OUR SERVICES) */
+/* ------------------------------------- */
+
+.services {
+    background-color: var(--bg-light);
+    color: var(--card-bg-light);
+    padding: 80px 5% 120px;
+    position: relative;
+    z-index: 10;
+}
+
+.services h2 {
+    color: var(--secondary-color);
+}
+
+.services .subtitle {
+    color: var(--text-dark);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--card-bg-light);
+    color: var(--text-dark);
+    padding: 30px;
+    border-radius: 20px;
+    border-top: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ------------------------------------- */
+/* 6. COURSE GRID */
+/* ------------------------------------- */
+
+.courses {
+    background-color: var(--bg-light);
+}
+
+.courses h2 {
+    color: var(--secondary-color);
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.course-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.course-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #E5E7EB;
+    padding-bottom: 10px;
+}
+
+.course-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.course-card ul li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.see-more {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+}
+
+/* ------------------------------------- */
+/* 7. PARTNERSHIP / JOIN US SECTION */
+/* ------------------------------------- */
+
+.partnership {
+    background: var(--bg-light); /* Gradient Orange/Gold */
+    padding: 80px 5%; 
+    color: var(--white);
+    text-align: center;
+    position: relative;
+}
+
+.partnership h2 {
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.partnership-grid {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    background: var(--white);
+    color: var(--text-dark);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%; /* Dua kartu berdampingan */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Penambahan Gaya Ikon dan Bentuk di Dalam Kartu */
+.icon-placeholder {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.partner-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.partner-card p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.cta-contact {
+    display: inline-block;
+    background-color: var(--secondary-color); /* Orange CTA */
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ------------------------------------- */
+/* 4. ABOUT US SECTION (COMPANY OVERVIEW) */
+/* ------------------------------------- */
+
+.about-overview {
+    background-color: var(--primary-color);
+    padding: 100px 5%;
+    text-align: left;
+    color: var(--white); /* Teks putih untuk kontras dengan background gelap */
+    position: relative;
+    overflow: hidden; /* Penting untuk menjaga lapisan */
+}
+
+/* Lapisan Gelap (Overlay) untuk memastikan teks terbaca */
+.about-overview::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Pastikan konten teks berada di atas overlay */
+}
+
+.section-label {
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-overview h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.about-overview p {
+    font-size: 1.1rem;
+    color: #E5E7EB;
+    margin-bottom: 40px;
+}
+
+/* Tombol Meet Our Team */
+.cta-secondary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-secondary:hover {
+    background-color: #D86300;
+}
+
+
+/* ------------------------------------- */
+/* 8. VISION & MISSION SECTION (about.html) */
+/* ------------------------------------- */
+
+.vision-mission {
+    background-color: var(--white);
+    padding: 80px 5%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 40px;
+    text-align: left;
+}
+
+.vm-content {
+    flex: 3;
+    max-width: 700px;
+}
+
+.vision-mission h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.vision, .mission {
+    margin-bottom: 40px;
+}
+
+.mission ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mission ul li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%231D4ED8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-circle-check"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M9 12l2 2l4 -4"></path></svg>') no-repeat left 8px; /* Placeholder Checkmark */
+    background-size: 18px;
+    padding: 8px 0 8px 30px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+.core-value {
+    flex: 2; /* Ambil 2/5 lebar */
+    text-align: center;
+}
+
+.core-value img.core-value-img {
+    display: block;
+    max-width:500px; 
+    width: 100%; 
+    margin-top: 30px; 
+    height: auto;
+    margin: 30px auto 0;
+}
+
+/* ------------------------------------- */
+/* 10. TEAM / MENTOR (Di about.html) */
+/* ------------------------------------- */
+
+.team {
+    padding-top: 50px;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.team-title {
+    display: none; /* Sembunyikan judul utama jika sudah ada CTA */
+}
+
+/* Gaya untuk tombol MEET OUR TEAM di tengah */
+.cta-meet-team {
+    display: inline-block;
+    background-color: var(--secondary-color); 
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 kolom untuk semua anggota tim */
+    gap: 20px;
+    padding: 0 5%;
+    margin: 0 auto;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    /* Hapus border polos yang sebelumnya ada */
+    border: none;
+    box-shadow: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.team-member img {
+    /* Ganti gambar polos dengan gambar yang sudah di-frame (sesuai desain Anda) */
+    width: 100%;
+    max-width: 200px; /* Batasi lebar agar fit di 6 kolom */
+    height: auto;
+    border-radius: 20px; /* Sudut sedikit melengkung */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------- */
+/* 11. PACKAGE COMPARISON TABLE */
+/* ------------------------------------- */
+
+/* Definisikan warna paket sesuai desain */
+:root {
+    --package-basic: #FFC107;      /* Kuning Basic */
+    --package-standard: #2196F3;   /* Biru Standard */
+    --package-premium: #FF9800;    /* Oranye Premium */
+    --package-mentoring: #4CAF50;  /* Hijau Mentoring */
+    --package-pitching: #FFEB3B;   /* Kuning Muda Pitching */
+    --check-color: #4CAF50;
+    --x-color: #FF5722;
+    --bg-table: #F3F4F6;
+}
+
+.package-comparison {
+    background-color: var(--primary-color); /* Background biru tua */
+    padding: 100px 0;
+    text-align: center;
+}
+
+.package-comparison .section-title {
+    color: var(--white);
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.table-container {
+    overflow-x: auto; /* Penting untuk responsivitas tabel */
+    padding: 0 20px;
+}
+
+.package-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    min-width: 700px; /* Jaga agar tabel tidak terlalu kecil */
+}
+
+/* Header Paket (Baris Pertama) */
+.package-table th {
+    padding: 20px 10px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Kolom Fitur (Paling Kiri) */
+.package-table th.feature-column, .package-table td.feature-column {
+    background-color: var(--bg-table);
+    color: var(--text-dark);
+    text-align: left;
+    padding-left: 30px;
+    font-weight: 500;
+}
+
+/* Styling Baris Konten (Body) */
+.package-table td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #E5E7EB;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.package-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Styling Check (✔) dan X (❌) */
+.package-table td:empty, .package-table td:not(.feature-column) {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.package-table td:contains("✔") {
+    color: var(--check-color);
+}
+
+.package-table td:contains("❌") {
+    color: var(--x-color);
+}
+
+/* ------------------------------------- */
+/* 12. PRICE LIST SECTION */
+/* ------------------------------------- */
+
+.price-list {
+    background-color: var(--white);
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.price-list h2 {
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.price-grid {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan kartu turun ke baris baru */
+    justify-content: center;
+    gap: 25px;
+}
+
+.price-card {
+    flex: 0 0 180px; /* Lebar dasar kartu */
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.package-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.package-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.package-price .per-person {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+/* Tombol Pilih Paket */
+.btn-select {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-select:hover {
+    background-color: #D86300;
+}
+
+/* Memberikan warna latar belakang/aksen pada kartu */
+.price-card.basic-color { border: 3px solid var(--package-basic); }
+.price-card.standard-color { border: 3px solid var(--package-standard); }
+.price-card.premium-color { border: 3px solid var(--package-premium); }
+.price-card.mentoring-color { border: 3px solid var(--package-mentoring); }
+.price-card.pitching-color { border: 3px solid var(--package-pitching); }
+
+
+/* Media Query untuk Mobile */
+@media (max-width: 600px) {
+    .price-grid {
+        flex-direction: column; /* Tumpuk kartu di mobile */
+        align-items: center;
+    }
+    .price-card {
+        flex: 0 0 80%; /* Ambil lebar 80% layar di mobile */
+        max-width: 300px;
+        width: 100%;
+    }
+}
+
+/* ------------------------------------- */
+/* 13. COMPETITION PARTNERSHIP LOGO SECTION */
+/* ------------------------------------- */
+
+.competition-partnership {
+    background-color: var(--secondary-color); /* Warna Oranye dari desain */
+    background-image: linear-gradient(180deg, var(--secondary-color), #FFB74D);
+    padding: 80px 5%;
+    text-align: center;
+    color: var(--white);
+}
+
+.competition-partnership h2 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.competition-partnership .subtitle {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 5000px;
+    margin: 0 auto 40px auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    max-width: 1500px;
+    margin: 0 auto 40px auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk gambar partnership tunggal */
+.logo-container img.partner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cta-logo {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+/* ------------------------------------- */
+/* 14. COMPETITION LIST CARD SECTION */
+/* ------------------------------------- */
+
+.competition-list {
+    background-color: var(--bg-light); 
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.competition-list h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.competition-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.competition-card {
+    flex: 0 0 220px; /* Lebar dasar kartu */
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.competition-card:hover {
+    transform: translateY(-5px);
+}
+
+.competition-card img {
+    width: 100%;
+    height: 180px; /* Tinggi tetap untuk gambar */
+    object-fit: cover; /* Pastikan gambar mengisi kotak tanpa distorsi berlebihan */
+    display: block;
+}
+
+.card-label {
+    position: absolute;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+/* Warna Label sesuai paket */
+.card-label.basic-color { background-color: var(--package-basic); }
+.card-label.premium-color { background-color: var(--package-premium); }
+
+.competition-card h4.comp-title {
+    font-size: 1rem;
+    padding: 15px 15px 5px 15px;
+    color: var(--text-dark);
+    font-weight: 600;
+    min-height: 50px; /* Pastikan judul punya ruang */
+}
+
+.comp-prize {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    padding: 0 15px 10px 15px;
+}
+
+.btn-more {
+    display: block;
+    text-align: center;
+    background-color: var(--check-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-more:hover {
+    background-color: #388E3C;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 600px) {
+    .competition-grid {
+        gap: 15px;
+    }
+    .competition-card {
+        flex: 0 0 45%; /* Tampilkan 2 kartu per baris */
+        max-width: 200px;
+    }
+}
+
+/* ------------------------------------- */
+/* 7. FOOTER */
+/* ------------------------------------- */
+
+footer {
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 30px 5%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ------------------------------------- */
+/* 8. MEDIA QUERIES (RESPONSIVE DESIGN) */
+/* ------------------------------------- */
+
+/* Untuk Tablet dan Mobile (di bawah 1024px) */
+@media (max-width: 1024px) {
+    .service-grid, .course-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet */
+    }
+    
+    .hero h1 {
+        font-size: 4.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .vision-mission {
+        /* Pindah ke tumpukan vertikal (stacked) di tablet/mobile */
+        flex-direction: column;
+        text-align: center;
+    }
+    .vm-content, .core-value {
+        flex: auto;
+        width: 100%;
+        max-width: none;
+    }
+    .core-value img.core-value-img {
+        /* Tetap terpusat dengan margin auto */
+        max-width: 400px; 
+        margin: 30px auto 0; 
+    }
+}
+
+
+/* Untuk Ponsel (di bawah 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    nav {
+        display: none; /* Sembunyikan navigasi di mobile (nanti diaktifkan dengan JS) */
+    }
+    
+    .hamburger-menu {
+        display: block; /* Tampilkan menu hamburger */
+    }
+    
+    .service-grid, .course-grid {
+        grid-template-columns: 1fr; /* 1 kolom untuk ponsel */
+    }
+    
+    .partnership-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .partner-card {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 3.6rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    
+}
+
+@media (max-width: 700px) {
+    .table-container {
+        /* Pindahkan overflow-x: auto; ke table-container agar padding bekerja */
+        padding: 0 5px;
+    }
+    .package-table {
+        min-width: 600px; /* Memastikan tabel dapat di-scroll secara horizontal */
+    }
+    .package-table td, .package-table th {
+        font-size: 0.9rem;
+        padding: 10px 5px;
+    }
+    .package-table td.feature-column {
+        padding-left: 10px;
+    }
+}
