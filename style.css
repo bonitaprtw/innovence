@@ -922,7 +922,7 @@ footer {
 
 
 /* Untuk Ponsel (di bawah 600px) */
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     header {
         padding: 15px 20px;
     }
@@ -962,7 +962,7 @@ footer {
     
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
     .table-container {
         /* Pindahkan overflow-x: auto; ke table-container agar padding bekerja */
         padding: 0 5px;
@@ -977,4 +977,5 @@ footer {
     .package-table td.feature-column {
         padding-left: 10px;
     }
+
 }
