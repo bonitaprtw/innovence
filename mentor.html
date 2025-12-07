@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>INNOVENCE | INNOVATE WITH PURPOSE</title>
+
+        <link href="https://fonts.googleapis.com/css2?
+        family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet"href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/Logo_Innovence.jpg" alt="Logo Innovence" style="height: 70px;">
+            </div>
+            <nav class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B5563"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses-package.html">Courses</a></li>
+                <li><a href="mentor.html">Mentor</a></li>
+                <li><a href="competition.html">Competition</a></li>
+                <li><a href="join-us.html">Join Us</a></li>
+            </nav>
+            <nav class="main-nav">
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="about.html">About Us</a></li>
+                <li class="hideOnMobile"><a href="courses-package.html">Courses</a></li>
+                <li class="hideOnMobile"><a href="mentor.html">Mentor</a></li>
+                <li class="hideOnMobile"><a href="competition.html">Competition</a></li>
+                <li class="hideOnMobile"><a href="join-us.html" class="cta-button">Join Us</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 500" width="24px" fill="#4B5563"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </nav>
+        </header>
+
+        <section id="join" class="partnership">
+            <div class="partnership-grid">
+                <div class="partner-card mentor-network">
+                    <div class="icon-placeholder">👤</div>
+                    <h3>Join Our Mentor Network</h3>
+                    <p>We welcome certified practitioners and industry professionals to join us as business mentors</p>
+                    <a href="#" class="cta-contact">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>INNOVENCE &copy; 2025. INNOVATE WITH PURPOSE.</p>
+        </footer>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+    </body>
+</html>
