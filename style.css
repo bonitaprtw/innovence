@@ -279,31 +279,61 @@ h2 {
 }
 
 .course-card {
-    background: var(--white);
+    background: var(--bg-light) ;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
     text-align: left;
+    background-image: 
+        /* Lingkaran Peach Besar (Kiri Atas) */
+        radial-gradient(circle at 0% 20%, #FFE5B4 120px, transparent 121px),
+        /* Lingkaran Abu-abu Kecil (Kanan Atas) */
+        radial-gradient(circle at 90% 15%, #CBD5E1 35px, transparent 36px),
+        /* Lingkaran Kuning Terang (Kanan Bawah) */
+        radial-gradient(circle at 95% 85%, #dceba0 90px, transparent 91px);
 }
 
 .course-card h3 {
-    color: var(--primary-color);
+    color: var(--tersier-color);
     font-size: 1.3rem;
     margin-bottom: 20px;
     border-bottom: 2px solid #E5E7EB;
     padding-bottom: 10px;
+    text-align: center;
 }
 
-.course-card ul {
+.checklist {
     list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
-.course-card ul li {
-    padding: 8px 0;
+.checklist li {
+    position: relative;
+    padding-left: 45px; /* Ruang untuk icon centang */
+    margin-bottom: 18px;
     font-size: 0.95rem;
-    color: var(--text-dark);
+    line-height: 1.5;
+    color: #334155;
+}
+
+.checklist li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--tersier-color); /* Warna hijau centang */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .see-more {
@@ -1176,4 +1206,5 @@ footer {
     .sidebar {
         width: 100%;
     }
+
 }
